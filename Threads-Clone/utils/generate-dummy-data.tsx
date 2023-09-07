@@ -55,3 +55,7 @@ export function createRandomThread(): Thread {
         createdAt: faker.date.recent().toISOString(),
     }
 }
+
+export function generateThreads(): Thread[] {
+    return new Array(50).fill(null).map((_) => createRandomThread());
+}

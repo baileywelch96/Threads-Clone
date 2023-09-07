@@ -4,28 +4,28 @@ export interface Thread {
     content: string;
     image?: string;
     replies?: Reply[];
-    repliesCount?: number;
-    likesCount?: number;
+    repliesCount: number;
+    likesCount: number;
     mention?: boolean;
-    mentionUser?: User;
+    mentionUser: User;
     createdAt: string;
-}
-
-export interface Reply {
+  }
+  
+  export interface Reply {
     id: string;
     author: User;
     content: string;
     likes: number;
     createdAt: string;
-}
-
-export interface User {
+  }
+  
+  export interface User {
     id: string;
     name: string;
     username: string;
-    verfied: boolean;
-    avatar: string;
+    verified: boolean;
+    photo: string;
     bio: string;
     link?: string;
     followers?: User[];
-}
+  }
